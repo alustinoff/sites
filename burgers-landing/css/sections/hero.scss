@@ -1,0 +1,176 @@
+.hero{
+	background: url("../backgrounds/bg-hero.png") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+
+
+/*-------------------header---------*/
+
+
+.header{
+	padding-top: 12px;
+}
+
+
+.header .container{
+	@extend %clearfix;
+}
+
+.header__logo{
+	float: left;
+	width: 32%;
+}
+
+
+.header__menu{
+	float: left;
+	width: 68%;
+	vertical-align: middle;
+	padding-top: 13px;
+}
+
+.nav{
+	width: 83%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav__list{
+	width: 100%;
+	@extend %clearfix;
+}
+
+.nav__item{
+	display: inline-block;
+	margin-right: 15px;
+	float: left;
+
+	&:after{
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: white;
+		margin-left: 15px;
+	}
+
+	&:last-child{
+		margin-right: 0;
+		&:after{
+			display: none;
+		}
+	}
+}
+
+.nav__link{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	font-family: 'ubuntumedium';
+
+	&:hover{
+		text-decoration: underline;
+	}
+
+}
+
+.order-link{
+	//width: 15%;
+	width: 97px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	background: $orange;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 9px 0;
+	text-align: center;
+	font-family: 'ubuntumedium';
+
+	&:hover{
+		background: $red;
+	}
+}
+
+.hero__container{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+}
+
+.hero__content{
+	@extend %clearfix;
+}
+
+
+.hero__left{
+	float: left;
+	width: 50%;
+}
+
+.hero__img{
+	display: inline-block;
+	max-width: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.hero__right{
+	float: left;
+	width: 50%;
+	padding-top: 115px;
+}
+
+.section__title{
+	color: $yellow;
+	font-size: 72px;
+	padding-bottom: 12px;
+	font-family: 'gagalin-regular';
+}
+
+.hero__desc{
+	font-size: 65px;
+	color: #fff;
+	text-transform: lowercase;
+	line-height: 1em;
+	font-family: 'lifehack-medium';
+}
+
+.down-arrow{
+	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	transition: .3s;
+	margin-left: -15px;
+
+	&:hover {
+		svg{
+			width: 35px;
+			height: 35px;
+			margin-top: -15px;
+		}
+	}
+}
+
+.down-arrow svg{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}

@@ -1,0 +1,76 @@
+.menu{
+	background: url("../backgrounds/menu.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.menu-acco{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	@extend %clearfix;
+}
+
+.menu-acco__item{
+	float: left;
+	height: 100%;
+	@extend %clearfix;
+
+	&_active{
+		.menu-acco__trigger-text{
+			color: $yellow;
+		}
+
+		/*.menu-acco__content{
+			width: 550px;
+		}*/
+	}
+}
+
+.menu-acco__trigger{
+	height: 100%;
+	display: block;
+	width: 80px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	float: left;
+
+}
+
+.menu-acco__trigger-text{
+	font-family: 'gagalin-regular';
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	height: 80px;
+	margin-top: -40px;
+	white-space: nowrap;
+	width: 650px;
+	color: #fff;
+	left: 50%;
+	margin-left: -312px;
+	transform: rotate(-90deg);
+	text-align: center;
+}
+
+.menu-acco__content{
+	background: rgba(#2f3234, .93);
+	opacity: 0.93;
+	width: 0;
+	float: left;
+	height: 100%;
+	color: #fff;
+	overflow: hidden;
+	transition: .3s;
+}
+
+.menu-acco__text{
+	width: 550px;
+	padding: 61px 30px 0 34px;
+	font-size: 14px;
+	line-height: 1.7;
+	font-family: 'ubuntu-light';
+}

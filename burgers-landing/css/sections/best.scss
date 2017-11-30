@@ -1,0 +1,54 @@
+.best{
+	background: url("../backgrounds/bg2.jpg") center center no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+
+.best .container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.section__title_black{
+	color: $black;
+}
+
+.best .section__title{
+	margin-bottom: 80px;
+}
+
+.best__list{
+	font-size: 0;
+}
+
+.best__list *{
+	font-size: 14px;
+}
+
+.best__item{
+	display: inline-block;
+	vertical-align: top;
+	width: 33.3%;
+}
+
+.best__icon{
+	width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+
+.best__title{
+	font-size: 24px;
+	color: $black;
+	font-family: 'lifehack-medium';
+	margin-bottom: 20px; 
+}
+
+.best__text{
+	font-size: 14px;
+	line-height: 1.7;
+	font-family: 'ubuntu-light';
+}

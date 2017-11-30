@@ -1,0 +1,31 @@
+$orange: #e45028;
+$orange2: #e35028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #c1401e;
+
+
+
+@import "misc/normalize.scss";
+@import "misc/mixins.scss";
+@import "misc/fonts.scss";
+@import "misc/adjustment.scss";
+
+
+
+
+/*-------------sections----------*/
+
+@import "sections/hero.scss";
+@import "sections/best.scss";
+@import "sections/burgers.scss";
+@import "sections/team.scss";
+@import "sections/menu.scss";
+@import "sections/reviews.scss";
+@import "sections/order.scss";
+@import "sections/map.scss";
+@import "sections/dots.scss";
+
+/*----------owl.carousel------*/
+
+@import "owl.carousel/owl.carousel.scss"

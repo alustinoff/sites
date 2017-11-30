@@ -1,0 +1,91 @@
+.reviews__list{
+	height: 100%;
+	@extend %clearfix;
+}
+
+.reviews__item{
+	height: 50%;
+	width: 25%;
+	float: left;
+}
+
+.review{
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	&:hover{
+		.review__hover{
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+.review__photo{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.review__hover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(20, 20, 20, 0.7);
+	transform: scale(.9);
+	opacity: 0;
+	transition: .3s;
+	padding: 50px 20px;
+}
+
+.review__title{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'gagalin-regular';
+	line-height: 2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-bottom: 25px;
+}
+
+.review__shorttext{
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.7;
+	font-family: 'ubuntu-light';
+
+}
+
+.review__button-wrap{
+	width: 110px;
+	//border-radius: 5px;
+	//padding: 11px 15px;
+	//background: $black;
+	height: 35px;
+    //text-align: center;
+    padding-top: 3px;
+    margin-top: 17px;
+}
+
+.review__view{
+	color: #fff;
+	font-size: 13px;
+	line-height: 2.3;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'ubuntumedium';
+	transition: .3s;
+	background: $black;
+	border-radius: 5px;
+	padding: 10px 15px;
+
+	&:hover{
+		background: #1f2122;
+	}
+}

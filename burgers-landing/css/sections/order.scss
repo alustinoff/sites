@@ -1,0 +1,176 @@
+.order{
+	background: url("../backgrounds/order.png") center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.order .container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.order .section__title{
+	text-align: center;
+}
+
+.order__form{
+	margin-left: -5%;
+}
+
+.order__form-tag{
+	@extend %clearfix;
+}
+
+.order__form-col{
+	float:left;
+	width: 45%;
+	margin-left: 5%;
+}
+
+.order__form-row{
+	@extend %clearfix;
+	margin-bottom: 16px;
+}
+
+.order__form-row_double{
+	margin-left: -20px;
+}
+
+.order__form-row_double .order__form-block{
+	float: left;
+	width: calc(100%/2 - 20px);
+	margin-left: 20px;
+	display: block;
+}
+
+.order__form-label{
+	font-size: 14px;
+	line-height: 1.7em;
+	color: #fff;
+	font-family: 'ubuntu-light';
+	margin-bottom: 17px;
+}
+
+.order__form-input{
+	font-size: 14px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 100%;
+	padding:7px 25px;
+}
+
+.order__form-row_quatro{
+	margin-left: -20px;
+}
+
+.order__form-row_quatro .order__form-block{
+	float: left;
+	width: calc(100%/4 - 20px);
+	margin-left: 20px;
+	display: block;
+}
+
+.order__form-input-textarea{
+	height: 110px;
+}
+
+.order__radio{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.order__radio-elem{
+	position: absolute;
+	top: 0;
+	left: -9999px;
+}
+
+.order__radio-fake{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+
+	&:after{
+		content: "";
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: $orange2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: .3s;
+	}
+}
+
+.order__radio-elem:checked {
+	& + .order__radio-fake{
+		&:after {
+			width: 8px;
+			height: 8px;
+		}
+	}
+}
+
+.order__radio-title{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 10px;
+	font-family: 'ubuntu-light';
+}
+
+
+.order__radio_checkbox {
+	
+	.order__radio-fake {
+		border-radius: 0px;
+	}
+
+	.order__radio-elem:checked {
+		&+.order__radio-fake {
+				
+			&:after {
+				background: transparent;
+				background-image: url('../content/checkbox.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				width: 11px;
+				height: 10px;
+				border-radius: 0;
+
+
+			}
+		}
+	}
+}
+
+.order .order-link{
+	border: 0;
+	cursor: pointer;
+}
+
+.order__form-button_reset{
+	color: #fff;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    line-height: 1.7em;
+    margin-left: 14px;
+    font-family: 'ubuntu-light';
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
