@@ -1,0 +1,200 @@
+.footer{
+	height: 565px;
+	background: #f8f8f8;
+	position: relative;
+}
+
+.footer .container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.footer__container{
+	position: relative;
+	@extend %clearfix;
+}
+
+.footer__left{
+	float: left;
+	width: 510px;
+	padding-right: 48px;
+}
+
+.company-name{
+	color: #cccccc;
+	font-size: 46px;
+	font-family: 'montserrat-bold';
+	line-height: 1;
+    margin-bottom: 30px;
+}
+
+.footer__text{
+	color: $grey;
+	font-size: 15px;
+	line-height: 1.6;	
+}
+
+.footer__followers{
+	color: $black;
+	font-size: 14px;
+	font-family: 'montserrat-regular';
+	padding-bottom: 14px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 45px;
+
+	span{
+		font-size: 18px;
+		font-family: 'montserrat-bold';
+	}
+}
+
+.footer__followus-text{
+	float: left;
+}
+
+.footer__followus-list{
+	float: left;
+}
+
+.cont{
+	@extend %clearfix;
+	padding-top: 18px;
+}
+
+.followus__list{
+	@extend %clearfix;
+}
+
+.followus__item{
+	display: inline-block;
+	float: left;
+	margin-left:20px;
+}
+
+.email-form{
+	margin-top: 36px;
+	@extend %clearfix;
+	width: 380px;
+}
+
+.email__input{
+	//padding: 14px 140px 14px 14px;
+	padding: 14px 2px 14px 14px;
+	width: 60%;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	@include placeholder ($color: #cccccc);
+	float: left;
+	font-family: 'robotolight-italic';
+}
+
+.email__submit{
+	width: 40%;
+	color: #fff;
+	background: $blue;
+	//padding: 15px 34px;
+	padding: 15px 0;
+	border: 0 none;
+	float: left;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: 'montserrat-bold';
+}
+
+.footer__right{
+	float: left;
+	width: calc(100% - 510px);
+	@extend %clearfix;
+}
+
+.blogs{
+	float: left;
+	width: 50%;
+}
+
+.blogs__title{
+	font-size: 14px;
+	color: $black;
+	font-family: 'montserrat-regular';
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.blogs__item{
+	@extend %clearfix;
+	margin-bottom: 30px;
+}
+
+.blogs__photo{
+	width: 120px;
+	height: 80px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+}
+
+.blogs__text{
+	font-size: 12px;
+	line-height: 1.5;
+	font-family: 'montserrat-regular';
+	color: $black;
+	text-transform: uppercase;
+	padding-left:145px;
+	padding-top: 15px;
+}
+
+.blogs__date{
+	font-size: 13px;
+	line-height: 1.8;
+	font-family: 'robotolight-italic';
+	color: $grey;
+	padding-left:145px;
+}
+
+.instagram{
+	float: left;
+	width: 50%;
+	padding-left: 70px;
+}
+
+.instagram__title{
+	font-size: 14px;
+	color: $black;
+	font-family: 'montserrat-regular';
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.instagram__item{
+	display: inline-block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 88px;
+	width: 88px;
+}
+
+.instagram__link{
+	display: inline-block;
+	font-size: 13px;
+	line-height: 1.8;
+	color: $black;
+	font-family: 'robotolight-italic';
+	margin-top: 19px;
+}
+
+.footer-bottom-text{
+	text-align: center;
+	color: $black;
+	font-size: 14px;
+	font-family: 'montserrat-regular';
+	padding-top: 25px;
+	border-top: 1px solid #e5e5e5;
+	margin-top: 69px;
+
+	& span{
+		color: $pinky;
+	}
+}

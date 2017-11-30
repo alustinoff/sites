@@ -1,0 +1,93 @@
+.design{
+	overflow: hidden;
+}
+
+.design .container{
+	@extend %clearfix;
+	position: relative;
+	height: 100%;
+}
+
+.design__left{
+	float: left;
+	width: 70%;
+	height: 100vh;
+	min-height: 420px;
+    position: relative;
+}
+
+.design__content{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	padding-right: 200px;
+	padding-left: 50px;
+}
+
+.section__prefix{
+	font-size: 16px;
+	line-height: 1.1em;
+	color: $pinky;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'exomedium';
+}
+
+.design .section__prefix{
+	margin-bottom: 16px;
+}
+
+.section__title{
+	font-size: 40px;
+	line-height: 1.25;
+	color: $black;
+	font-family: 'exomedium';
+}
+
+.design .section__title{
+	padding-right: 50px;
+	padding-bottom: 44px;
+	text-align: left;
+}
+
+.section__title span{
+	color: $pinky;
+}
+
+.section__content-text{
+	font-size: 16px;
+	color: $black;
+	opacity: .66;
+	font-family: 'exomedium';
+
+}
+
+.design p{
+	padding-bottom: 36px;
+}
+
+
+.design__right{
+	position: absolute;
+	//float: left;
+	left: 70%;
+	width: 9999px;
+	//height: 100vh;
+	height: 100%;
+	background: $grey2;
+
+	&:after{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		content: "";
+		//border-right: 700px solid $pinky;
+		//border-top: 100vh solid transparent;
+		border-right: 9999px solid $pinky;
+		border-top: 9999px solid transparent;
+
+	}
+}
+

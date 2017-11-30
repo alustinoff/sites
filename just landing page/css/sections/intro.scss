@@ -1,0 +1,122 @@
+.intro{
+	background: url('../backgrounds/bg1.jpg') center center no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.intro-video{
+	//display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.intro__container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);	
+}
+
+.intro__title{
+	margin: 0 auto;
+	width: 750px;
+	text-align: center;
+	font-size: 60px;
+	color: $black;
+	line-height: 1.25em;
+	padding: 0 20px;
+	font-family: 'exothin';
+}
+
+.play-button-block{
+	text-align: center;
+	font-size: 0;
+}
+
+.play-button{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background: $grey;
+	border-radius: 50%;
+	position: relative;
+	margin-top: 42px;
+
+	&:after{
+		position: absolute;
+		display: block;
+		content: "";
+		top: 52%;
+		left: 55%;
+		transform: translate(-52%,-55%);
+		border-left: 17px solid white;
+		border-right: 0px solid transparent;
+		border-top: 10px solid transparent;
+		border-bottom: 9px solid transparent;
+	}
+
+	&_active{
+		&:after{
+			position: absolute;
+			display: block;
+			content: "";
+			top: 50%;
+			left: 35%;
+			width: 10px;
+			height: 30px;
+			transform: translate(-35%, -50%);
+			background: #fff;
+			border: 0;
+			border-radius: 3px;
+		}
+
+		&:before{
+			position: absolute;
+			display: block;
+			content: "";
+			top: 50%;
+			left: 65%;
+			width: 10px;
+			height: 30px;
+			transform: translate(-65%, -50%);
+			background: #fff;
+			border: 0;
+			border-radius: 3px;
+		}
+	}
+}
+
+.order-link{
+	color: white;
+	font-size: 16px;
+	display: block;
+	width: 190px;
+	line-height: 1em;
+	background: $pinky;
+	padding: 17px 49px;
+	border-radius: 3px;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: 39px;
+	font-family: 'exoregular';
+	transition: .3s;
+
+	&:hover{
+		box-shadow: 0 4px 8px black;
+	}
+
+}
+
+.intro__norification{
+	margin: 0 auto;
+	font-size: 14px;
+	color: $black;
+	opacity: .6;
+	text-align: center;
+	margin-top: 19px;
+	font-family: 'exoregular';
+}

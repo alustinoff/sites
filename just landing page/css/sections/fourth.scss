@@ -1,0 +1,74 @@
+.fourth{
+	overflow: hidden;
+}
+
+.fourth .container{
+	position:relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.fourth__content{
+	@extend %clearfix;
+	position: relative;
+	z-index: 10;
+}
+
+.fourth__left{
+	float: left;
+	width: 40%;
+}
+
+.fourth__right{
+	float: left;
+	width: 60%;
+	padding-left: 76px;
+	padding-right: 146px;
+	padding-top: 35px;
+}
+
+.macbook-pic{
+	height: 352px;
+	width: 100%;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.fourth .section__prefix{
+	padding-bottom: 25px;
+}
+.fourth .section__title{
+	text-align: left;
+	padding-bottom: 40px;
+}
+
+/*.fourth__background{
+	z-index: 10;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+
+	&:after{
+	position: relative;
+	display: block;
+	content: "";
+	background: $pinky;
+	width: 999px;
+	height: 999px;
+	transform: rotate(-45deg);
+	top: 50%;
+	right: 50%;
+	}
+}*/
+
+.fourth__background{
+	position: absolute;
+	height: calc(100vh * 2);
+	width: 100vw;
+	background: $pinky;
+	z-index: 0;
+	transform: rotate(45deg);
+    left: -62%;
+}

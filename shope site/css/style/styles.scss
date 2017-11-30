@@ -1,0 +1,577 @@
+/*---------adjustment---------*/
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background: #f0f0f0;
+	font-size: 14px;
+	line-height: 1.42;
+}
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.empty{
+	height:115px;
+}
+.footer{
+	height: 115px;
+	margin-top: -115px;
+	position: relative;	
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	li{
+		list-style: none;
+	}
+}
+
+p{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+/*---------header---------*/
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.header{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb3e38+0,ff8f30+100 */
+background: #fb3e38; /* Old browsers */
+background: -moz-linear-gradient(left, #fb3e38 0%, #ff8f30 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #fb3e38 0%,#ff8f30 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #fb3e38 0%,#ff8f30 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3e38', endColorstr='#ff8f30',GradientType=1 ); /* IE6-9 */
+margin-bottom: 20px;
+}
+
+.header__logo, .header__search, .header__menu{
+	float: left;
+}
+
+.header__top{
+	@extend %clearfix;
+}
+
+.header__logo{
+	width: 25%;
+}
+
+.header__search{
+	width: 40%;
+}
+
+.header__menu{
+	width: 35%;
+}
+
+.logo{
+	display: inline-block;
+}
+.logo__pic{
+	display: block;
+	max-width: 175px;
+	max-height: 55px;
+}
+
+.search{
+	position: relative;
+}
+
+.search__input{
+	padding: 10px 40px 10px 35px;
+	background: rgba(#fff, .2);
+	border: 0 none;
+	border-radius: 50px;
+	color: #fff;
+	outline: none; /*убирает синюю грань инпута при наведении*/
+	@include placeholder ($color: #fff);
+	width: 100%;
+}
+
+.search__submit {
+	background: url('./img/search.png') 0 0 no-repeat;/*!!!!!! разобраться почему не работает*/
+	width: 18px;
+	height: 18px;
+	display: block;
+	border: none;
+	position: absolute;
+	right: 18px;
+	top: 50%;
+	margin-top: -9px;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.menu__item{
+	display: inline-block;
+}
+
+.menu{
+	text-align: justify;
+	&:after{ /*justify работает только при количестве строк >1*/
+		content: "";
+		display: inline-block;
+		width:100%;
+		height: 0;
+	}
+}
+
+.menu__link{
+	display: block; /*ссылка это инлайновый элемент*/
+	padding: 10px;
+}
+
+.menu__link-iconed{
+	padding-right: 20px;
+	padding-left: 50px;
+	position: relative;
+	border : 2px solid #ffaf6a;
+	border-radius: 50px;
+}
+
+.menu__link-text {
+	color: #fff;
+	font-size: 13px;
+}
+
+.menu__link-icon{
+	position: absolute;
+	left: 13px;
+	top: 0;
+	bottom: 0;
+	width: 30px;
+}
+
+.menu__link-icon-pic{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: 30px;
+}
+
+.header__top{
+	padding: 20px;
+	padding-bottom: 0;
+	border-bottom: 1px solid rgba(#fff, .2);
+}
+
+/*---------nav---------*/
+
+.nav__list{
+	text-align: justify;
+
+	&:after{
+		content: "";
+		width: 100%;
+		height: 0;
+		display: inline-block;
+	}
+}
+
+.nav__item{
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.nav__link{
+	&:hover{
+		.nav__title{
+			color: #ffc960;
+		}
+		.nav__pic_1{
+			background-image: url('img/header-bottom/tablets-icon-hover.png');
+		}
+		.nav__pic_2{
+			background-image: url('img/header-bottom/mobile-icon-hover.png');
+		}
+		.nav__pic_3{
+			background-image: url('img/header-bottom/desctop-icon-hover.png');
+		}
+		.nav__pic_4{
+			background-image: url('img/header-bottom/laptop-icon-hover.png');
+		}
+		.nav__pic_5{
+			background-image: url('img/header-bottom/adds-icon-hover.png');
+		}
+		.nav__pic_6{
+			background-image: url('img/header-bottom/forhome-icon-hover.png');
+		}
+	}
+}
+
+.nav__icon, .nav__title, .nav__pic{
+	display: inline-block;
+	vertical-align: middle;
+	transition: .3s;
+}
+
+.nav__icon{
+	position: relative;
+	width: 45px;
+	height: 45px;
+
+}
+
+.nav__pic{	
+	position: absolute;
+	display: block;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: .3s;
+	
+}
+
+.nav__pic_1{
+	width: 21px;
+	height: 30px;
+	background-image: url('img/header-bottom/tablets-icon.png');
+}
+.nav__pic_2{
+	width: 14px;
+	height: 30px;
+	background-image: url('img/header-bottom/mobile-icon.png');
+}
+.nav__pic_3{
+	width: 38px;
+	height: 31px;
+	background-image: url('img/header-bottom/desctop-icon.png');
+}
+.nav__pic_4{
+	width: 45px;
+	height: 25px;
+	background-image: url('img/header-bottom/laptop-icon.png');
+}
+.nav__pic_5{
+	width: 30px;
+	height: 23px;
+	background-image: url('img/header-bottom/adds-icon.png');
+}
+.nav__pic_6{
+	width: 24px;
+	height: 30px;
+	background-image: url('img/header-bottom/forhome-icon.png');
+}
+
+.nav__title{
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/*-----------breadcrumbs---------*/
+
+.breadcrumbs__item{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+
+	&:first-child{
+		margin-left: 0;
+		.breadcrumbs__link{
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
+
+.breadcrumbs__link{
+	font-size: 11px;
+	color: #fa3f37;
+	vertical-align: middle;
+
+	&:before{
+		content: "";
+		display: inline-block;
+		background: url('./img/way__arrow.png') 0 0 no-repeat;
+		width: 16px;
+		height: 7px;
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+}
+
+.title{
+	font-size: 24px;
+	color: #2e2e2e;
+	margin-top: 0;
+	font-weight: normal;
+}
+
+
+/*------container------*/
+
+.content-wrapper{
+	.container{
+		background: #fff;
+		@extend %clearfix;
+	}
+}
+
+.sidebar{
+	float: left;
+	width: 25%;
+}
+
+.content{
+	float: left;
+	width: 75%;
+	border-left: 1px solid #e7e7e7;
+}
+
+
+.products__item{
+	@extend %clearfix;
+	position: relative;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.products__slideshow{
+	float: left;
+	width: 30%;
+	padding: 25px;
+}
+
+.slideshow__display{
+	height: 235px;
+	position: relative;
+}
+
+.slideshow__display-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 95%;
+	max-height: 95%;
+}
+
+.products__desc{
+	float: left;
+	width: 45%;
+
+	&:before{
+		content: "";
+		display: block;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		width: 1px;
+		background: #e7e7e7;
+		left: 30%;
+	}
+}
+
+
+
+.slideshow__thumbs{
+	@extend %clearfix;
+}
+
+.slideshow__thumbs-item{
+	float: left;
+	width: 25%;
+}
+
+.slideshow__thumbs-link{
+	display: block;
+	position: relative;
+	height: 54px;
+
+	img{
+		display: block;
+		/*position: absolute;*/
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.products__title{
+	margin-top: 0;
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+
+.products__desc{
+	padding: 40px 25px;
+}
+
+.products__desc-content{
+	font-size: 14px;
+	color: #676767;
+
+	li{
+		margin-bottom: 10px;
+	}
+}
+
+.products__price{
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+	width: 25%;
+	padding: 20px;
+}
+
+.products__price-inner{
+	border: 1px solid #e7e7e7;
+	height: 100%;
+	position: relative;
+	padding: 20px;
+}
+
+.products__buy{
+	position: absolute;
+	bottom: 23px;
+	left: 50%;
+	transform: translateX(-50%);
+	//left: 20px;
+	display: block;
+	padding: 10px 40px;
+	background: #ff8e2f;
+	color: #fff;
+	border-radius: 50px;
+
+}
+
+
+.categories__item{
+	border-bottom: 1px solid #e7e7e7;
+	position: relative;
+	padding: 6px 0;
+}
+
+.categories__link{
+	display: block;
+	padding: 10px 20px;
+	padding-right: 50px;
+	font-size: 0;
+}
+
+.catigories__icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 10%;
+}
+
+.categories__text{
+	vertical-align: middle;
+	display: inline-block;
+	width: 90%;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.categories__amount{
+	position: absolute;
+	font-size: 14px;
+	line-height: 16px;
+	top: 50%;
+	margin-top: -8px;
+	right: 10px;
+
+}
+
+
+/*-----------pagination-------*/
+
+.pagination{
+	text-align: center;
+
+	.container{
+		background: #fff;
+		padding: 30px 0;
+	}
+}
+
+.pagination__control, .pagination__list{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pagination__list{
+	margin: 0 26px;
+}
+
+.pagination__item{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pagination__control{
+	width: 11px;
+	height: 19px;
+	background-image: url('./img/sprite/sprite.png');
+	background-repeat: no-repeat;
+}
+
+.pagination__link{
+	width: 40px;
+	text-align: center;
+	display: inline-block;
+	&:hover{
+		color: red;
+	}
+}
+
+.pagination__control-left{
+	background-position: 0px 0px;
+	&:hover{
+		background-position: -11px 0px;
+	}
+}
+
+.pagination__control-right{
+	background-position: -22px 0px;
+	&:hover{
+		background-position: -33px 0px;
+	}
+}
+
+.footer{
+	text-align: center;
+	padding: 40px;
+}
+
+.nav__icon{
+	display: inline-block;
+}

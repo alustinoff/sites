@@ -1,0 +1,24 @@
+$yellow: #fce38a;
+$black: #333333;
+$grey: #999999;
+$blue: #95e1d3;
+$light-blue: #b5eae0;
+$pinky: #f38181;
+
+
+
+
+@import "misc/normalize.scss";
+@import "misc/mixins.scss";
+@import "misc/fonts.scss";
+@import "misc/adjustment.scss";
+@import "misc/stylesheet.scss";
+
+
+
+//----------sections-------------
+
+@import "sections/intro.scss";
+@import "sections/story.scss";
+@import "sections/services.scss";
+@import "sections/footer.scss";

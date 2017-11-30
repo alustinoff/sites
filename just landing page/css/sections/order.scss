@@ -1,0 +1,263 @@
+.order{
+	position: relative;
+
+	/*&:after{
+		content: "";
+		display: block;
+		height: 41%;
+	}*/
+}
+
+.order__container{
+	height: 59%;
+	background: $blue;
+}
+
+.order__container .container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.section__title_white{
+	color: #fff;
+}
+
+.order__form{
+	padding-top: 95px;
+}
+
+.order__form-row{
+	@extend %clearfix;
+}
+
+.order__form-block{
+	display: inline-block;
+	float: left;
+	width: 25%;
+	padding-right: 30px;
+}
+
+.order__form-input{
+	width: 100%;
+	padding: 14.5px 0 14.5px 29px;
+	background: #464c77;
+	border: 1px solid #999cb4;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	@include placeholder ($color: #f6f5f3);
+	font-family: 'exoregular';
+}
+
+.order-link-tag{
+	float: left;
+	width: 25%;
+	position: relative;
+
+	&:before{
+		position: absolute;
+		display: block;
+		content: "";
+		width: 56px;
+		height: 42px;
+		background: url('../content/arrow.png') center center no-repeat;
+		top: -120%;
+    	left: 0;
+	}
+
+	&:after{
+		position: absolute;
+		display: inline-block;
+		content: "30 days free trial for all.";
+		text-transform: none;
+		top: -120%;
+    	left: 15%;
+    	font-size: 16px;
+    	color: #f6f5f3;
+    	font-family: 'exoregular';
+	}
+}
+
+
+.order .order-link{
+	float: left;
+	width: 100%;
+	margin-top: 0;
+	position: relative;
+}
+
+.order .section__postfix{
+	font-size: 16px;
+	line-height: 1em;
+	color: #f6f5f3;
+	opacity: .6;
+	font-family: 'exoregular';
+	padding-top: 35px;
+}
+
+
+.footer{
+	height: 41%;
+	//height: 332px;
+	background: #fff;
+	position: relative;
+	//margin-top: -41%;
+
+	&:after{
+		position: absolute;
+		display: block;
+		content: "";
+		right: 0;
+		top: 0;
+		border-top: 41vh solid #ff8a8a;
+		border-left: 20vw solid transparent;
+		//border-bottom: 0 solid transparent;
+		//border-right: 0 solid transparent;
+		//z-index: -10;
+
+	}
+}
+
+.footer__container{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.footer__list{
+	@extend %clearfix;
+}
+
+.footer__item{
+	float: left;
+	width: 25%;
+
+	&:nth-child(2){
+		width: 15%;
+		margin-left: 30px;
+	}
+
+	&:nth-child(3){
+		width: 15%;
+		margin-left: 30px;
+	}
+}
+
+.footer__title{
+	text-align: left;
+	font-family: 'exomedium';
+	font-size: 22px;
+	color: $black;
+	position: relative;
+
+	span{
+		color: #fff;
+		position: relative;
+
+		&:after{
+			position: absolute;
+			display: block;
+			content: "";
+			/*border-left: 42px solid #ff8a8a;
+			border-top: 23px solid transparent;
+			border-bottom: 23px solid transparent;
+			border-right: 0 solid transparent;
+			border-radius: 7px;*/
+			width: 42px;
+			height: 47px;
+			background-image: url('../content/Polygon-1.png');
+			background-position: center center;
+			background-repeat: no-repeat;
+			left: -7%;
+    		top: -50%;
+    		z-index: -10;
+		}
+	}
+}
+
+
+.footer__content{
+	//white-space: pre-line;
+    text-align: left;
+    padding-top: 22px;
+    font-family: 'exomedium';
+    font-size: 14px;
+    color: rgba(#000, .56);
+}
+
+.search-form{
+	white-space: normal;
+	@extend %clearfix;
+}
+
+.search-form__input{
+	float: left;
+	background: #f6f6f6;
+	//width: 214px;
+	border: #b8b8bf solid 1px;
+	border-radius: 3px 0 0 3px;
+	padding: 14.5px 0 14.5px 28px;
+	width: 80%;
+	font-size: 16px;
+	color: #000;
+	font-family: 'exoregular';
+
+	&::-webkit-input-placeholder {
+		color: rgba(#000000, .4);
+	}
+
+	&:-moz-placeholder{
+		color: rgba(#000000, .4);
+	}
+}
+
+.search-form__submit{
+	float: left;
+	width: 20%;
+	height: 49px;
+	background: $pinky;
+	padding: 0;
+	border: 0;
+	border-radius: 0 3px 3px 0;
+	position: relative;
+	display: block;
+	cursor: pointer;
+	background-image: url('../content/search-button.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: .3s;
+	
+	&:hover{
+		box-shadow: 0 4px 8px black;
+	}
+}
+
+.icons-list{
+	@extend %clearfix;
+	padding-top: 18px;
+	padding-left: 35px;
+}
+
+.icons-list__item{
+	float: left;
+	display: inline-block;
+	width: 19%;
+	height: 22px;
+	
+}
+
+.icons__link{
+	display: inline-block;
+	position: relative;
+	width: 21px;
+	height: 21px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}

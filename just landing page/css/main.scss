@@ -1,0 +1,25 @@
+$black: #282828;
+$pinky: #ff6d6d;
+$grey: #8185a3;
+$grey2: #ececec;
+$blue: #323969;
+
+
+
+
+@import "misc/normalize.scss";
+@import "misc/mixins.scss";
+@import "misc/fonts.scss";
+@import "misc/adjustment.scss";
+
+
+//-----------sections----------
+
+@import "sections/intro.scss";
+@import "sections/design.scss";
+@import "sections/features.scss";
+@import "sections/fourth.scss";
+@import "sections/partners.scss";
+@import "sections/interface.scss";
+@import "sections/order.scss";
+
